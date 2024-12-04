@@ -6,6 +6,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 class ScoreComputation {
+
     private final ScoreDisplay display;
     private final ScoreGame game;
     Logger logger = LoggerFactory.getLogger(ScoreComputation.class);
@@ -67,13 +68,13 @@ class ScoreComputation {
                 game.setFin(true);
             }
 
-            showResult();
         }
+        showResult();
     }
 
     private void showResult() {
         logger.debug(game.toString());
-        System.out.println(display.display(game));
+        System.out.println(display.displayScore(game));
     }
 
 }

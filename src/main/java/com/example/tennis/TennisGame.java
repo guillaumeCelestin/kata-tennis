@@ -45,7 +45,7 @@ public class TennisGame implements CommandLineRunner {
         }
     }
 
-    private void runGame(String commands) throws WrongInputException {
+    protected void runGame(String commands) throws WrongInputException {
         for(char ch : commands.toCharArray()) {
             if (ch == 'A') {
                 score.playerAScore();

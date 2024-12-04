@@ -11,7 +11,7 @@ public class ScoreDisplay {
     public final String ADVANTAGE = "Advantage Player %s";
     public final String VICTORY = "Player %s wins the game";
 
-    public String display(ScoreGame game) {
+    public String displayScore(ScoreGame game) {
         if (game.isFin()) {
             return (game.getScoreA() > game.getScoreB()) ? String.format(VICTORY, PLAYEURA) : String.format(VICTORY, PLAYEURB);
         }
