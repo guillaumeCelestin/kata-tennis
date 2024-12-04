@@ -1,4 +1,4 @@
-package com.example.kata_tennis;
+package com.example.tennis;
 
 import org.springframework.stereotype.Component;
 
@@ -11,20 +11,20 @@ public class ScoreDisplay {
     public final String ADVANTAGE = "Advantage Player %s";
     public final String VICTORY = "Player %s wins the game";
 
-    public String display(int scoreA, int scoreB, boolean deuce, boolean advantageA, boolean advantageB, boolean gameOver) {
-        if (gameOver) {
-            return (scoreA > scoreB) ? String.format(VICTORY, PLAYEURA) : String.format(VICTORY, PLAYEURB);
+    public String display(ScoreGame game) {
+        if (game.isFin()) {
+            return (game.getScoreA() > game.getScoreB()) ? String.format(VICTORY, PLAYEURA) : String.format(VICTORY, PLAYEURB);
         }
-        if (deuce) {
+        if (game.isEgalite()) {
             return DEUCE;
         }
-        if (advantageA) {
+        if (game.isAdA()) {
             return String.format(ADVANTAGE, PLAYEURA);
         }
-        if (advantageB) {
+        if (game.isAdB()) {
             return String.format(ADVANTAGE, PLAYEURB);
         }
-        return "Player A: " + convertToTennisScore(scoreA) + " / Player B: " + convertToTennisScore(scoreB);
+        return "Player A: " + convertToTennisScore(game.getScoreA()) + " / Player B: " + convertToTennisScore(game.getScoreB());
 
     }
 

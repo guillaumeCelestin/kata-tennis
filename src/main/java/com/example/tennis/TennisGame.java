@@ -1,6 +1,6 @@
-package com.example.kata_tennis;
+package com.example.tennis;
 
-import com.example.kata_tennis.exeption.WrongInputException;
+import com.example.tennis.exeption.WrongInputException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;

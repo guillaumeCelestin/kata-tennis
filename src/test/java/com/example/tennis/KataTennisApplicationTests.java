@@ -1,4 +1,4 @@
-package com.example.kata_tennis;
+package com.example.tennis;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

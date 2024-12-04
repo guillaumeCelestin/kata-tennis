@@ -1,4 +1,4 @@
-package com.example.kata_tennis.exeption;
+package com.example.tennis.exeption;
 
 
 public class WrongInputException extends Exception {
