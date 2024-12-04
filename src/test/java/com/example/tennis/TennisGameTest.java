@@ -1,6 +1,6 @@
 package com.example.tennis;
 
-import com.example.tennis.exeption.WrongInputException;
+import com.example.tennis.exception.WrongInputException;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
